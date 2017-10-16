@@ -1,4 +1,4 @@
-#InstaDot
+# InstaDot
 
 Instagram like dot indicator standalone view. It can be used with any component
 
@@ -29,7 +29,7 @@ dependencies {
 }
 ```
 
-In layout:
+### In layout:
 
 Add view with attributes of your choice
 
@@ -48,20 +48,20 @@ Add view with attributes of your choice
 ```
 
 
-[REQUIRED] Set number of pages:
+#### [REQUIRED] Set number of pages:
 
 ```java
     instadotViewInstance.setNoOfPages(int pages);
 ```
 
 
-[OPTIONAL] Set number of visible items (it must be greater than Default value (6))
+#### [OPTIONAL] Set number of visible items (it must be greater than Default value (6))
 
 ```java
     instadotViewInstance.setNoOfPages(int pages);
 ```
 
-Attributes for customization [If none set, all default values are used]:
+#### Attributes for customization [If none set, all default values are used]:
 ``` xml
    <attr name="dot_activeColor" format="color" />
    <attr name="dot_inactiveColor" format="color" />

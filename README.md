@@ -58,7 +58,7 @@ Add view with attributes of your choice
 #### [OPTIONAL] Set number of visible items (it must be greater than Default value (6))
 
 ```java
-    instadotViewInstance.setNoOfPages(int pages);
+    instadotViewInstance.setVisibleDotCounts(int pages);
 ```
 
 #### Attributes for customization [If none set, all default values are used]:

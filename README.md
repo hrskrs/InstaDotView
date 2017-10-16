@@ -1,4 +1,5 @@
-#InstaDot (https://android-arsenal.com/details/1/3084) [![API](https://img.shields.io/badge/API-14%2B-brightgreen.svg?style=flat-square)] [![license](https://img.shields.io/badge/license-apache 2.0-lightgrey.svg?style=flat-square)](http://www.apache.org/licenses/LICENSE-2.0.html)
+#InstaDot
+
 Instagram like dot indicator standalone view. It can be used with any component
 
 # Demo

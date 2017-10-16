@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="InstaDotView">
+        <attr name="dot_activeColor" format="color" />
+        <attr name="dot_inactiveColor" format="color" />
+        <attr name="dot_activeSize" format="dimension" />
+        <attr name="dot_inactiveSize" format="dimension" />
+        <attr name="dot_mediumSize" format="dimension" />
+        <attr name="dot_smallSize" format="dimension" />
+        <attr name="dot_margin" format="dimension" />
+        <attr name="dots_visible" format="integer" />
+    </declare-styleable>
+</resources>

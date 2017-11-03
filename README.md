@@ -51,6 +51,7 @@ Add view with attributes of your choice
 ```
 
 
+
 #### [REQUIRED] Set number of pages:
 
 ```java
@@ -63,6 +64,21 @@ Add view with attributes of your choice
 ```java
     instadotViewInstance.setVisibleDotCounts(int pages);
 ```
+
+
+### setup with viewpager
+
+```java
+     ViewPager viewPager = findViewById(R.id.viewpager);
+     viewPager.setAdapter(adapter);
+    
+     instaDotView = findViewById(R.id.instadot);
+     instaDotView.setupViewPager(viewPager); // already have setNoOfPages and default onPageListener
+     
+     //if want to custom listener
+     instaDotView.addOnDotPageListener(new YourOnPageListener());
+```
+
 
 #### Attributes for customization [If none set, all default values are used]:
 ``` xml

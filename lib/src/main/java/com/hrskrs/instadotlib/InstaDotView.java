@@ -8,12 +8,16 @@ import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.support.annotation.Nullable;
+import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.animation.AccelerateDecelerateInterpolator;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static android.support.v4.view.ViewPager.OnPageChangeListener;
+
 
 /**
  * Created by hrskrs on 10/16/17.
@@ -44,6 +48,8 @@ public class InstaDotView extends View {
 
     private int noOfPages = 0;
     private int visibleDotCounts = DEFAULT_VISIBLE_DOTS_COUNT;
+
+    private ViewPager viewPager;
 
     public InstaDotView(Context context) {
         super(context);
@@ -285,6 +291,48 @@ public class InstaDotView extends View {
             previousPage = currentPage;
         }
     }
+
+
+    public void setupViewPager(ViewPager viewPager) {
+        if (viewPager != null && viewPager.getAdapter() != null) {
+            this.viewPager = viewPager;
+            setNoOfPages(viewPager.getAdapter().getCount());
+            viewPager.removeOnPageChangeListener(mInternalPageChangeListener);
+            viewPager.addOnPageChangeListener(mInternalPageChangeListener);
+            mInternalPageChangeListener.onPageSelected(viewPager.getCurrentItem());
+        }
+    }
+
+    public void addOnDotPageListener(OnPageChangeListener onPageChangeListener) {
+        if (viewPager != null && viewPager.getAdapter() != null) {
+            if (onPageChangeListener !=null)
+                mInternalPageChangeListener = onPageChangeListener;
+                viewPager.addOnPageChangeListener(mInternalPageChangeListener);
+        }
+    }
+
+    public OnPageChangeListener getDotPageLister(){
+        return mInternalPageChangeListener;
+    }
+
+    private OnPageChangeListener mInternalPageChangeListener = new OnPageChangeListener() {
+
+        @Override
+        public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+        }
+
+        @Override
+        public void onPageSelected(int position) {
+            if (viewPager !=null && viewPager.getAdapter() !=null)
+                onPageChange(position);
+        }
+
+        @Override
+        public void onPageScrollStateChanged(int state) {
+
+        }
+    };
 
     private void updateDots() {
 

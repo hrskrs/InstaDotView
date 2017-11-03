@@ -125,7 +125,7 @@ public class InstaDotView extends View {
         int viewCount = Math.min(getNoOfPages(), getVisibleDotCounts());
         if (viewCount < 1) return;
 
-        setStartPosX(getSmallDotStartX());
+        setStartPosX(noOfPages > visibleDotCounts ? getSmallDotStartX() : 0);
 
         dotsList = new ArrayList<>(viewCount);
         for (int i = 0; i < viewCount; i++) {

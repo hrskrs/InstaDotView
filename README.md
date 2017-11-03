@@ -28,7 +28,7 @@ _Note:_ do not add the `jitpack.io` repository under `buildscript`
 Add the `dependency` in your app `build.gradle` :
 ```groovy
 dependencies {
-    compile 'com.github.hrskrs:InstaDotView:1.0'
+    compile 'com.github.hrskrs:InstaDotView:1.1'
 }
 ```
 
@@ -57,6 +57,11 @@ Add view with attributes of your choice
     instadotViewInstance.setNoOfPages(int pages);
 ```
 
+#### [REQUIRED] update dot on page change:
+
+```java
+instaDotView.onPageChange(pageNo);
+```
 
 #### [OPTIONAL] Set number of visible items (it must be greater than Default value (6))
 

@@ -1,3 +1,5 @@
+⚠️ THIS PROJECT IS NOT MAINTAINED ⚠️
+
 # InstaDot 
 [![Android Arsenal]( https://img.shields.io/badge/Android%20Arsenal-InstaDot-green.svg?style=flat )]( https://android-arsenal.com/details/1/6348 )
 [![API](https://img.shields.io/badge/API-10%2B-brightgreen.svg?style=flat-square)](https://android-arsenal.com/api?level=10) 
